@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>addEventListener P2</title>
+	<meta charset="utf-8"/>
+
+  <style>
+     #dv1{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 0px;
+     }
+      #dv2{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 120px;
+      }
+      #dv3{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 240px;
+      }
+       #dv4{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 360px;
+      }
+  </style>
+
+  <script>
+     // Com funções anônimas------------------
+      var px=0;
+      var py=0;
+    
+      document.addEventListener("keydown",function(event){
+           var obj=document.getElementById("dv1");
+           var tecla=event.keyCode;
+           //37=Esquerda  -  38=cima  -  39=direita  -  40=baixo
+           if(tecla==37){
+              px-=10;
+              obj.style.left=px+"px";
+           }else if(tecla==38){
+              py-=10;
+              obj.style.top=py+"px";
+           }else if(tecla==39){
+              px+=10;
+              obj.style.left=px+"px";
+           }else if(tecla==40){
+              py+=10;
+              obj.style.top=py+"px";
+           }
+             
+              document.addEventListener("keydown",move);
+           
+      });
+
+  </script>
+
+    <script>
+      // Com configuração direto na função move e sem funções anônimas-----------------
+
+      var px=0;
+      var py=0;
+      
+      function move2(){
+      
+           var obj=document.getElementById("dv2");
+           var tecla=event.keyCode;
+           //37=Esquerda  -  38=cima  -  39=direita  -  40=baixo
+           if(tecla==37){
+              px-=10;
+              obj.style.left=px+"px";
+           }else if(tecla==38){
+              py-=10;
+              obj.style.top=py+"px";
+           }else if(tecla==39){
+              px+=10;
+              obj.style.left=px+"px";
+           }else if(tecla==40){
+              py+=10;
+              obj.style.top=py+"px";
+           }
+      }
+
+      document.addEventListener("keydown",move2);
+
+  </script>
+
+
+    <script>
+     // Com tecla enter para remover função------------------
+      var px=0;
+      var py=0;
+    
+      function move3(){
+           var obj=document.getElementById("dv3");
+           var tecla=event.keyCode;
+           //37=Esquerda  -  38=cima  -  39=direita  -  40=baixo
+           if(tecla==37){
+              px-=10;
+              obj.style.left=px+"px";
+           }else if(tecla==38){
+              py-=10;
+              obj.style.top=py+"px";
+           }else if(tecla==39){
+              px+=10;
+              obj.style.left=px+"px";
+           }else if(tecla==40){
+              py+=10;
+              obj.style.top=py+"px";
+           }else if(tecla==13){
+             alert("Evento keydown Removido no quadro 03");
+              document.removeEventListener("keydown",move3);
+           }
+      }
+
+      document.addEventListener("keydown",move3);
+
+  </script>
+
+
+
+
+</head>
+<body>
+
+   
+    <div id="dv1">DV1</div>
+
+
+    <div id="dv2">DV2</div>
+
+
+    <div id="dv3">DV3</div>
+
+
+
+
+
+    
+</body>
+</html>

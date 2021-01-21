@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Date () - Manipulando Data e Hora </title>
+	<meta charset="utf-8"/>
+ 	
+<script>
+
+   var dt=new Date();
+   var diasem=dt.getDay();
+   var dia=dt.getDate();
+   var mes=dt.getMonth();
+   var ano=dt.getFullYear();
+
+   var horas=dt.getHours();
+   var minutos=dt.getMinutes();
+   var segundos=dt.getSeconds();
+
+   var meses=new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+   var semanas=new Array("Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado");
+
+  
+   //document.write(Date()); // Para impressão da data completa.
+   document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano + "<br>");
+   document.write(horas + " : " + minutos + " : " + segundos);
+
+</script>
+
+
+
+
+</head> 
+<body>
+
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>String P1 - Match</title>
+	<meta charset="utf-8"/>
+
+</head>
+
+<body>
+    <p>RESUMO : Modificadors e Metacaracteres.</p><br><hr><br>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+      // OBS: Pesquisar os tipos de metacaracteres da apostila de JS.
+
+      // length - retorna a quantidade de itens encontrados.
+      // MODIFICADORES //
+      // i - Não diferencia letras maísculas de minúsculas.
+      // g - encontra todas os itens pesquisados de uma só vez e armazena em uma posição array.
+      // m - Pesquisa normal sem armazenar em forma de array.
+
+      var texto=document.getElementById("txt").innerHTML;
+
+      //var res=texto.match("de");
+      //var res=texto.match(/de/g);
+      //var res=texto.match(/Javascript/ig);
+      //var res=texto.match(/[o|a]/ig); //Pesquisando dois itens ao mesmo tempo.
+      //var res=texto.match(/[^oa]/ig); // Encontra todos os itens menos os indicados.
+      //var res=texto.match(/[a-g]/ig);  // Encontra itens entre os especificados.
+      var res=texto.match(/[^a-g]/ig); // Retorne os itens que não estão entre a e g.
+
+      document.write(res + ":" + res.length + "<br>");
+
+      document.write(res[1]); // imprime o item da posição do array.
+      
+    </script>
+
+</body>
+</html>

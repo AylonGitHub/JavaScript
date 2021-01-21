@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Métodos para manipulação de String P2</title>
+	<meta charset="utf-8"/>
+
+</head>
+
+<body>
+    <p>RESUMO : search, replace, charAt, charCodeAt e String.fromCharCode().</p><br><hr><br>
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+
+      var res=texto.search(/curso/i); // search - retorna o primeiro item encontrado e sua posição (considerando a contagem dos espaços)
+
+      document.write(res+"<br>");
+
+      var res=texto.replace(/curso/i,"aula"); // replace - encontra e substitui pela palavra indicada.
+
+      document.write(res+"<br>");
+
+      var res=texto.charAt(2); // charAt - retorna o elemento da posição indicada.
+
+      document.write(res+"<br>");
+
+      var res=texto.charCodeAt(0); // charCodeAt - retorna o código do elemento indicado pela posição.
+
+      document.write(res+"<br>");
+
+      var res=texto.charCodeAt(0);
+      document.write(String.fromCharCode(67)); // retorna o caracter correspondente a posição indicada.
+      
+      document.write(res+"<br>");
+
+      var res=texto.charCodeAt(0);
+      document.write(String.fromCharCode(67)); // retorna o caracter correspondente a posição indicada.
+
+    </script>
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt1">CFB Cursos - Curso de Javascript</p>
+
+    <script>
+      var txt=document.getElementById("txt1").innerHTML;
+      var txt2=" - aula 46 de curso de javascript";
+
+      var res=txt.concat(txt2); // concat - concatena o conteúdo das variáveis.
+
+      document.write(res);
+    </script>
+
+</body>
+</html>

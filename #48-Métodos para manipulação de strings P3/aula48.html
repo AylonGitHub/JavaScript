@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Métodos para manipulação de String P3</title>
+	<meta charset="utf-8"/>
+
+</head>
+
+<body>
+    <p>Resumo: indexOf, localeCompare, slice, split e subtr.</p><br>
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto1=document.getElementById("txt").innerHTML;
+
+      var res=texto1.indexOf("b"); // indexOf - se encontrada a letra retorna a posição, senão encontrada retorna -1.
+
+      if(res<0){
+        document.write("Letra não encontrada");
+      }else{
+        document.write(res);
+      }  
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto01=document.getElementById("txt").innerHTML;
+      var texto02=texto01;
+
+      var res=texto01.localeCompare(texto02); // localeCompar - compara se o conteúdo das variáveis são diferentes ou iguais.
+
+      //0=iguais
+      // != 0 diferentes.
+
+      if(res==0){
+        document.write("Strings Iguais");
+      }else{
+        document.write("Strings diferentes");
+      }  
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+      
+      var res=texto.slice(3,10); // slice - retorna o conteúdo que está entre as posições indicadas.
+
+      document.write(res);
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+      
+      var res=texto.split(" "); // split - separa o conteúdo usando como divisor o dígito indicado.
+
+      document.write(res[5]);
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+      
+      var res=texto.substr(4,6); // substr - Indica o tamanho do corte de acondo com as posições de início e fim indicadas.
+
+      document.write(res);
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+      
+      var res=texto.toLowerCase(); // toLowerCase - convert string para minúsculo e toUpperCase para maiúsculo.
+
+      document.write(res);
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+    <p id="txt">CFB Cursos - Curso de Javascript </p>
+
+    <script>
+    
+
+      var texto=document.getElementById("txt").innerHTML;
+      
+      var res=texto.toUpperCase().substr(22,10); // Combinando os recursos.
+      document.write(res);
+      
+
+    </script>
+ 
+</body>
+</html>

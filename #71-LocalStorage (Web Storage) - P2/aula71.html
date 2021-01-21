@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>LocalStorage (Web Storage) - P2</title>
+	<meta charset="utf-8"/>
+  <style>
+      #fconf{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: 1px solid #000;
+        background-color: #888;
+        padding: 20px;
+        border-radius: 5px;
+        display: none;
+      }
+  </style>
+
+ 
+
+  <script>
+     // PARTE 4 /////// Alteração de padrões da pagina E armazenamento no Storage e Recupera a ultima configuração salva.
+
+     var vcorf, vcort, vnome;
+        function inicia(){     // função que restaura a ultima configuração.
+           if(localStorage.nome){
+                vcorf=localStorage.corf;
+                vcort=localStorage.cort;
+                vnome=localStorage.nome;
+                defineCor(1,vcorf);
+                defineCor(2,vcort);
+                document.getElementById("painel").innerHTML="Bem vindo "+vnome+"<br>";
+              }
+        }
+        function gravar(){  // função que armazena os valores escolhidos nas variaveis e oculta o formulario.
+             var form=document.getElementById("fconf");
+             vnome=document.getElementById("fnome").value;
+             localStorage.corf=vcorf;
+             localStorage.cort=vcort;
+             localStorage.nome=vnome;
+             form.style.display="none";
+        }
+
+        function defineCor(op,cor){ // verifica atravéz do operador (1 ou 2) se vai alterar o fundo ou a letra e armazena nas variáveis as cores escolhidas.
+          if(op==1){
+              document.body.style.backgroundColor=cor;
+              vcorf=cor;
+          }else{
+              document.body.style.color=cor;
+              vcort=cor;
+
+          }
+        }
+
+        function mostraConf(){  // função que associa o formulário à variável form e mostra o formulário quando chamado pelo botão.
+          var form=document.getElementById("fconf");
+          form.style.display="block";
+        }
+
+        window.addEventListener("load",inicia);
+  
+  </script>
+</head>
+<body>
+
+    <p>LocalStorage - Curso de Javascript</p>
+    <p id="painel"></p>
+
+    <button onclick="mostraConf()">Configurações</button>
+
+    <form name="fconf" id="fconf">
+       <label>Nome:</label><br>
+       <input type="text" name="fnome" id="fnome" size="20"><br><br>
+       <label>Cor fundo:</label><br>
+       <input type="radio" name="fcorF" onclick="defineCor(1,'#000')">Preto<br>
+       <input type="radio" name="fcorF" onclick="defineCor(1,'#fff')">Branco<br>
+       <input type="radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho<br>
+       <input type="radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde<br>
+       <input type="radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul<br><br>
+       <label>Cor texto:</label><br>
+       <input type="radio" name="fcorT" onclick="defineCor(2,'#000')">Preto<br>
+       <input type="radio" name="fcorT" onclick="defineCor(2,'#fff')">Branco<br>
+       <button type="button" name="Gravar" onclick="gravar()">Gravar</button>
+
+    </form>
+
+    
+
+
+   
+
+</body>
+</html>

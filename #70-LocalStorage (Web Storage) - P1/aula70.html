@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>LocalStorage (Web Storage) - P1</title>
+	<meta charset="utf-8"/>
+  <style>
+  </style>
+  <script>
+     // PARTE 1 //////////////////////////////////
+
+     localStorage.setItem("canal","CFB Cursos"); // setItem - cria o registro no local Storage.
+
+     //localStorage.removeItem("canal"); // removeItem - remove o registro do Local Storage
+
+     var vcanal=localStorage.getItem("canal"); // getItem - busca o registro indicado no Local Storage.
+
+     document.write(vcanal);
+
+     document.write("<hr>");
+ 	
+  </script>
+  <script>
+     // PARTE 2 /////// Verificar se o browser suporta Web Storage.
+
+     if(typeof(Storage)!="undefine"){
+
+
+           localStorage.setItem("canal","CFB Cursos"); // setItem - cria o registro no local Storage.
+
+           //localStorage.removeItem("canal"); // removeItem - remove o registro do Local Storage
+
+           var vcanal=localStorage.getItem("canal"); // getItem - busca o registro indicado no Local Storage.
+
+           document.write(vcanal);
+
+        }else{
+           document.write("Sem suporte a Web Storage!")
+        }
+           document.write("<hr>");
+  </script>
+  <script>
+     // PARTE 3 /////// Contando o número de visitas.
+
+     if(typeof(Storage)!="undefine"){
+          if(localStorage.visitas){
+                localStorage.visitas=Number(localStorage.visitas)+1;
+          }else{
+            //localStorage.setItem("visitas",1); // essas duas linnhas obtem o mesmo resultado.
+              localStorage.visitas=1;
+          }
+          document.write("Visitas: "+localStorage.visitas);         
+        }else{
+           document.write("Sem suporte a Web Storage!")
+        }
+  
+  </script>
+</head>
+<body>
+
+
+   
+
+</body>
+</html>

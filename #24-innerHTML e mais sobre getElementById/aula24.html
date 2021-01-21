@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>innerHTML e mais sobre getElementById</title>
+	<meta charset="utf-8">
+
+ 	    
+</head> 
+<body>
+
+   <p id="texto">CFB Cursos</p>
+   <input type="text" id="cxtexto" value="Curso de Javascript">
+   <div id="dv"> Texto da DIV </div>
+   
+   <script>
+
+     var cxt=document.getElementById("texto").innerHTML="Aula 24 - innerHTML";
+     document.getElementById("dv").innerHTML="NOVO TEXTO";
+
+
+   </script>
+
+
+</body>
+</html>

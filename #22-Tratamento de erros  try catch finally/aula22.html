@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Tratamento de erros / try catch finally</title>
+	<meta charset="utf-8">
+
+	 <script>
+
+      try{
+           document.writi("CFB Cursos");
+      }catch(e){
+           document.write("ERRO: "+ e.message);
+           console.log("Mensagem de erro:" + e.message);
+
+      }
+
+      document.write("<hr>");
+ ///---------------------------------------------
+
+     var num; //maximo 10
+
+     try{
+         num=prompt("Digite o Valor");
+         if(num>10){
+             throw new Error("Valor Inválido, o valor deve ser menor ou igual a 10<br>");
+         }
+         document.write("Valor Digitado: "+num);
+     }catch(e){
+         document.write("ERRO: "+ e.message);
+     }
+
+
+          document.write("<hr>");
+ ///---------------------------------------------
+
+
+     try{
+        num=prompt("Digite o valor");
+        if(num>10){
+           throw new Error("Valor Inválido, o valor deve ser menor que 10.")
+        }
+        document.write("O valor digita é:"+num);
+
+     }catch(e){
+        console.log(e);
+
+     }finally{
+        document.write("<br>Fim do tratamento");
+     }
+
+
+   </script>       
+
+</head> 
+<body>
+
+
+</body>
+</html>

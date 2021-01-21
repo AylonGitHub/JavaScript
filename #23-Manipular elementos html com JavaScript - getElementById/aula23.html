@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Manipulando elementos html com JavaScript - getElementById</title>
+	<meta charset="utf-8">
+
+	 <script>
+
+
+   </script>       
+
+</head> 
+<body>
+
+   <p id="texto">CFT Cursos</p>
+
+   <div id="caixa"></div>
+
+   <script>
+     //document.getElementById("texto").style.color="#f00";
+     var txt=document.getElementById("texto");
+     txt.style.color="#f00";
+     txt.style.fontSize="50px";
+     txt.style.display="block";
+
+     var cx=document.getElementById("caixa");
+     cx.style.border="2px solid #000";
+     cx.style.width="300px";
+     cx.style.height="300px";
+     cx.style.backgroundColor="#aaa";
+
+   </script>
+
+
+</body>
+</html>

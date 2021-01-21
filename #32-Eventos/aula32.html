@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Eventos</title>
+	<meta charset="utf-8"/>
+
+  <style>
+    
+      #dv1{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+
+  </style>
+  <script>
+    
+      function mudaCor(obj,cor){
+        obj.style.backgroundColor=cor;
+      }
+
+  </script>
+
+
+</head> 
+<body onload="ola()">
+
+    <div id="dv1" onmouseover="mudaCor(this,'#f00')" 
+                  onmouseout="mudaCor(this,'#fff')">
+                    
+    </div>
+    <br>
+    <button id="bot" onclick="alert('CFB Cursos')"
+                     onmouseover="mudaCor(document.getElementById('dv1'),'#00f')">Clique em mim
+    </button>
+
+    <br>
+    <!--------------------------------------------->
+    <br>
+
+
+    <script>
+      
+       function mudaPos(obj){
+            obj.style.position="absolute";
+            obj.style.left=Math.random()*500+"px";
+            obj.style.top=Math.random()*500+"px";
+       }
+
+    </script>
+
+    <button id="bot" onmouseover="mudaPos(this)">Clique em mim</button>
+
+    <br>
+    <!--------------------------------------------->
+    <br>
+
+
+    <script>
+      
+       function ola(){
+          var data=new Date();
+          var hora=data.getHours();
+          var txt="";
+          if(hora<12){
+            txt="Bom dia!";
+          }else if(hora<18){
+            txt="Boa Tarde!";
+          }else{
+            txt="Boa Noite!";
+          }
+          alert(txt);
+      }
+
+
+    </script>
+
+</body>
+</html>

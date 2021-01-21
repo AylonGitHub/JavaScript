@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>CFB Cursos - Javascript</title>
+	<meta charset="utf-8"/>
+  <style>
+     body{
+     	background-color: #f00;
+     	color: #fff;
+     }
+     a{color:#fff;}
+  </style>
+  <script>
+       
+
+  	   ///////// 1 //////////////
+       var aux=location.hash; // hash - faz a captura das palabras passadas separadas por #.
+       document.write(aux+"<hr>");
+       
+       ///////// 2 //////////////
+       var aux=location.hash;
+       var dados=aux.split("#"); // split - divide os parâmetros em array pelas #.
+       document.write(dados[1]);
+
+       document.write("<hr>");
+
+        ///////// 3 //////////////
+       var aux=location.hash;
+       var dados=aux.split("#");
+       var v1=dados[1];
+       var v2=dados[2];
+       document.write(v1);
+
+       document.write("<hr>");
+
+       ///////// 4 //////////////
+       
+       var h=location.hostname; // indicará o endereço de host.
+       document.write(h);
+       document.write("<hr>")
+
+       ///////// 5 //////////////
+       
+       var h=location.href; // indicará o endereço de URL.
+       document.write(h);
+       document.write("<br>")
+
+       ///////// 6 //////////////
+       /*
+       var h=location.href="http://www.youtube.com.br" // href - redireciona para url especificada.
+       document.write(h); */
+       document.write("<hr>")
+       
+       ///////// 7 //////////////
+       
+       var o=location.origin; // retorna o protocolo, o host e a porta.
+       document.write(o);
+       document.write("<hr>")
+
+       ///////// 8 //////////////
+       
+       var p=location.pathname; // Caminho após protocolo e hostname. Ex: http://www.youtube.com/cfbcursos <<-- esta ultima parte.
+       document.write(p);
+       document.write("<hr>");
+
+       ///////// 9 //////////////
+       
+       var p=location.port; // Identifica a porta. (se estiver online)
+       document.write(p);
+       document.write("<hr>");
+
+       ///////// 10 //////////////
+       
+       var pr=location.protocol; // Identifica o protocolo
+       document.write(pr);
+       document.write("<hr>");
+
+
+  </script>
+
+</head>
+<body>
+
+    <h1>Página 2 - p2.html</h1>
+
+    <a href="aula68.html">voltar</a>
+    
+</body>
+</html>

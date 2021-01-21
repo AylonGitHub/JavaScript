@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Recursividade (forma resumida para loop)</title>
+	<meta charset="utf-8"/>
+
+
+
+  <style>
+        #quad{
+          width: 200px;
+          height: 200px;
+          margin: 20px 50px;
+        }
+        #quad2{
+          width: 200px;
+          height: 200px;
+          margin: -30px 70px;
+        }
+  </style>
+
+  <script>
+    
+       function contador(min,max){
+        document.write(min+"<br>");
+        if(min<max){
+          contador(++min,max);
+        }
+      } 
+
+      contador(0,10); 
+
+
+
+      document.write("<hr>");
+
+      //  fatorial ------------
+
+      function fatorial(n){
+          if(n==1){
+            return 1;
+          }
+          return n*fatorial(n-1);
+      }
+      
+      document.write(fatorial(5));
+
+
+      //5!=5*4*3*2*1=120
+
+
+
+  </script>
+
+        
+
+
+
+</head>
+<body>
+  <br>
+  <br>
+  <div id="quad"><img src="engren.gif"></div>
+   <div id="quad2"><img src="engren.gif"></div>
+
+  <script>
+    // ANIMAÇÃO - GIRO DE OBJETOS//////////////
+    ///primeira engrenagem
+
+    var obj=document.getElementById("quad");
+    var ang=0;
+    var anima;
+    
+    function gira(){
+        obj.style.transform="rotate("+ang+"deg)";
+        ang++;
+        if(ang>360){
+          ang=0;
+       }
+       anima=requestAnimationFrame(gira);
+    }
+    gira();
+
+    ///// segunda engrenagem
+
+    var obj2=document.getElementById("quad2");
+    var ang2=0;
+    var anima2;
+    
+    function gira2(){
+        obj2.style.transform="rotate("+ang2+"deg)";
+        ang2--;
+        if(ang2<-360){
+          ang2=0;
+       }
+       anima2=requestAnimationFrame(gira2);
+    }
+    gira2();
+
+  </script>
+
+</body>
+</html>

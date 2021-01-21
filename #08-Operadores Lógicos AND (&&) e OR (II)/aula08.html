@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Operadores lógicos</title>
+	<meta charset="utf-8">
+
+	<script>
+
+              var pontos=41;
+              //vitoria=> (((>=30)&&(<=40)) || ((>=70)&&(<=80)))
+
+              if(  //    V           F
+                 ((pontos>=30)&&(pontos<=40))  //  F 
+
+                 ||  // F
+
+                 //   F              V
+                 ((pontos>=70)&&(pontos<=80)) //   F
+                     ){
+                     document.write("GANHOU");
+              }else{
+                     document.write("PERDEU");
+              }
+
+         
+	</script>
+       
+
+</head> 
+<body>
+
+</body>
+</html>

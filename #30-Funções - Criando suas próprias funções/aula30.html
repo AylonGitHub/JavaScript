@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Funções - Criando as próprias funções.</title>
+	<meta charset="utf-8"/>
+ 	
+
+</head> 
+<body>
+
+   <script>
+    
+    function escreve(){
+      document.write("Curso de Javascript - CFB Cursos<br>");
+    }
+
+    escreve();
+    
+   
+    // função com passagem de parâmetros------------------
+    
+    
+    function soma(n1,n2){
+      var res=n1+n2;
+      document.write(res +"<br>");
+    }
+        soma(5,2);
+    
+    // funções que retornam valores---------------
+     
+     function soma2(n1,n2){
+         var res=n1+n2;
+         return res;
+     }
+     var result=soma2(5,14);
+     document.write(result+"<br>");
+     
+
+     // Função para determinar a média de determinados valores.
+     
+     var numeros=new Array(10,2,5,30,25,19,20,50,150);
+
+     function media(nums){
+           var tam=nums.length;
+           var soma=0;
+           for(var i=0;i<tam;i++){
+               soma+=nums[i];
+           }
+           return Math.round(soma/tam);
+     }
+     document.write(media(numeros));
+
+
+
+
+
+   </script>
+
+</body>
+</html>

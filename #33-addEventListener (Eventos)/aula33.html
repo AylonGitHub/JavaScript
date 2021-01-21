@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>addEventListener(Eventos)</title>
+	<meta charset="utf-8"/>
+
+  <style>
+     #dv1{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 0px;
+     }
+      #dv2{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 120px;  
+     }
+      #dv3{
+        width: 100px;
+        height: 100px;
+        border:1px solid #000;
+        background-color: #f00;
+        position: absolute;
+        left:0px;
+        top: 240px;
+  </style>
+
+  <script>
+    
+      function msg(){
+        alert("CFB Cursos");
+      }  
+      
+      // Inicialização de eventos -------------------------------
+
+      function addEventos(){
+      document.getElementById("dv1").addEventListener("click",msg);
+      }
+
+      window.addEventListener("load",addEventos);
+
+  </script>
+
+
+  
+  <script>
+      // A mesma solicitação porém usando variáveis nas funções
+    
+      function msg2(){
+        alert("CFB Cursos");
+      } 
+      function cor1(){
+        var obj=document.getElementById("dv2");
+        obj.style.backgroundColor="#fff";
+      } 
+
+        function cor2(){
+        var obj=document.getElementById("dv2");
+        obj.style.backgroundColor="blue";
+      } 
+      
+      
+      // Inicialização de eventos -------------------------------
+      
+      function addEventos(){
+        var obj=document.getElementById("dv2");
+        obj.addEventListener("click",msg2);
+        obj.addEventListener("mouseover",cor1);
+        obj.addEventListener("mouseout",cor2);
+      }
+
+      window.addEventListener("load",addEventos);
+
+  </script>
+
+  <script>
+    
+     // Funções anônimas, que recebem atributos atravéz de variáveis.
+
+     function cores(obj,cor){
+         obj.style.backgroundColor=cor;
+     }
+
+     // Inicalização de eventos---------------------------------
+     function addEventos(){
+         var obj=document.getElementById("dv3");
+         obj.addEventListener("mouseover",function(event){
+             cores(obj,"#eee");
+         obj.addEventListener("mouseout",function(event){
+             cores(obj,"yellow");
+         })
+         });
+       }
+         window.addEventListener("load",addEventos);
+
+      
+
+  </script>
+
+</head>
+<body>
+
+    <!--<div id="dv1" onclick="msg()"></div> Chamando pelo HTML.-->
+    <div id="dv1">DV1</div>
+
+    <!-- Alternativa 01 para que o escutador seja ativado após renderização dos elementos da página (inserir este código após
+    codigo dos elementos). -->
+    <!--
+    <script>
+      
+      document.getElementById("dv1").addEventListener("click",msg);
+
+    </script>
+     -->
+
+
+     <br>
+     <br>
+     <br>
+     <div id="dv2">DV2</div>
+
+     <br>
+     <br>
+     <br>
+     <div id="dv3">DV23</div>
+</body>
+</html>

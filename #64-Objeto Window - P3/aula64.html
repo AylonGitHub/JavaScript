@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Objeto Window - P3</title>
+	<meta charset="utf-8"/>
+  <style>
+    #painel{
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 15px;
+      width: 2000px;
+      height: 2000px;
+      background-color: #ddd;
+    }
+  </style>
+
+  <script> // parte 1
+/*
+      var l,a,px,py,painel;
+
+      //l=window.innerWidth; // Largura interna e outerWidth - externa
+      //a=window.innerHeigth; // Altura interna.
+
+      function info(){
+           l=window.innerWidth; 
+           a=window.innerHeight; 
+           px=window.screenX; //posição X
+           py=window.screenY; //posição Y
+           painel.innerHTML="Larg:"+l+" - Alt:"+a+"<br>X:"+px+" - Y:"+py; 
+      }
+
+      function Rolar(){
+        window.scrollBy(500,500);
+      }
+
+
+      function inicia(){
+        document.getElementById("btnTam").addEventListener("click",info);
+        document.getElementById("btnPos").addEventListener("click",Rolar);
+         painel=document.getElementById("painel");
+      }
+
+
+      window.addEventListener("load",inicia);
+*/
+  </script>
+
+  <script> // parte 2
+/*    
+       function inicia(){
+        var qtde=window.length; // length - para obter a quantidade de frames dentro da pagina.
+        var painel=document.getElementById("painel2").innerHTML=qtde;
+        for(var i=0;i<qtde;i++){
+           // window.frames[]
+        }
+         window.frames[0].location="http://cfbcursos.com.br"; //  carrega a pagina http no freme do posição indicada.
+      }
+
+
+      window.addEventListener("load",inicia);
+
+*/
+  </script>
+
+  <script> // parte 3
+    
+       function inicia(){
+        var qtde=window.length; // length - para obter a quantidade de frames dentro da pagina.
+        var painel=document.getElementById("painel3").innerHTML=qtde;
+        for(var i=0;i<qtde;i++){
+           window.frames[i].location="http://cfbcursos.com.br"; // insere o conteúdo dentro de todas as frames.
+        }
+          
+      }
+
+
+      window.addEventListener("load",inicia);
+
+
+  </script>
+
+</head>
+
+<body>
+  
+   <!-- Parte 1 --
+   <button id="btnTam">Tamanho</button>
+   <button id="btnPos">Rolar</button>
+   
+   <div id="painel"></div>
+   -->
+   <br>
+   <hr>
+   <br>
+
+   <!-- Parte 2 -->
+   <iframe src=""></iframe>
+   <iframe src=""></iframe>
+   <iframe src=""></iframe>
+
+   <div id="painel2"></div>
+
+  <br>
+   <hr>
+   <br>
+
+   <!-- Parte 3 -->
+   <iframe src=""></iframe>
+   <iframe src=""></iframe>
+   <iframe src=""></iframe>
+
+   <div id="painel3"></div>
+</body>
+</html>

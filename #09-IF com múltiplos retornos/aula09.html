@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>IF com múltiplos retornos</title>
+	<meta charset="utf-8">
+
+	<script>
+   /*
+      var nota=4;
+
+      if(nota>=7){
+          document.write("Aprovado");
+      }else if((nota>=5)&&(nota<7)){
+          document.write("Em recuperação");
+      }else{
+          document.write("Reprovado");
+      }
+   */
+
+       var nota=50;
+       var res;
+
+       // Aprovado com louvor >95
+       // Aprovado            >=60
+       // Recuperação         >=40 && <60
+       // Recuperação         <40
+       // Recuperação com louvor <20
+
+
+       if(nota>=60){
+           res="Aprovado";
+       }else if(nota>=40){
+           res="Recuperação";
+       }else{
+           res="Reprovado";
+       }
+
+       document.write(res);
+
+
+
+  </script>       
+
+</head> 
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Switch-case</title>
+	<meta charset="utf-8">
+
+	<script>
+
+     var pos,msg,pontos;
+
+     pontos=100;
+
+     if(pontos>=1000){
+         pos=1;
+     }else if(pontos>=800){
+         pos=2;
+     }else if(pontos>=600){
+         pos=3;
+     }
+
+   
+      switch(pos){
+        case 1:
+           msg="Primeiro Lugar<br>Medalha de Ouro<br>";
+           break;
+        case 2:
+           msg="Segundo Lugar<br>Medalha de Prata<br>";
+           break;
+        default:
+           msg="Terceiro Lugar<br>Medalha de Bronze<br>";
+      }
+
+        switch(pos){
+        case 1:
+        case 2:
+            msg+="Subiu ao pódio";
+            break;
+        default:
+           msg+="Não subiu ao pódio";
+      }
+
+      document.write(msg);
+
+  </script>       
+
+</head> 
+<body>
+
+
+</body>
+</html>

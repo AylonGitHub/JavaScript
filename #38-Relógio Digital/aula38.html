@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Relógio Digital</title>
+	<meta charset="utf-8"/>
+
+
+
+  <style>
+      body{
+           margin: 0;
+           padding: 0;
+           display: flex;
+           
+      }
+      #container{
+            width: 100%;
+            height: 800px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+      }
+      #rel{
+            text-align: center;
+            color: #0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+            
+            
+
+      }
+     
+
+  </style>
+
+
+
+  <script>
+    
+     function relogio(){              //criar as variaveis
+         var data=new Date();
+         var hor=data.getHours();
+         var min=data.getMinutes();
+         var seg=data.getSeconds();    
+
+         if(hor<10){                 // acrescentar o número zero
+            hor="0"+hor;
+         }if(min<10){
+            min="0"+min;
+         }if(seg<10){
+             seg="0"+seg;
+         }
+
+         var horas=hor+":"+min+":"+seg;     // montar a sequencia
+         document.getElementById("rel").value=horas;
+
+     }
+
+     var tempo=setInterval(relogio,1000);    // estabelecer o intervalo de atualização
+
+     window.addEventListener("load",relogio);  // carregar a função junto com a página.
+
+  </script>
+
+</head>
+<body>
+  <div id="container">
+   <input type="text" id="rel"/>
+  </div>  
+</body>
+</html>

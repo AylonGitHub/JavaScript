@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Math - Métodos e Constantes Matemáticas</title>
+	<meta charset="utf-8"/>
+ 	
+<script>
+
+   // Métodos matemáticos:
+   // Math.abs -> absoluto.
+   // Math.ceil -> arredonda para cima.
+   // Math.florr -> arredonda para baixo.
+   // Math.round - automático.
+
+   var valor=10.8;
+
+   var mt=Math.round(valor);
+   
+   document.write(mt);
+
+</script>
+
+<hr>
+
+<script>
+   
+   var mt=Math.PI;
+   
+   document.write(mt);
+
+</script>
+
+<hr>
+
+<script>
+
+   // Math.pow -> Para elevar um número a qualquer potencia. Exemplo: 4 elevado a 2.
+
+   var valor=4;
+
+   var mt=Math.pow(valor,2); // pode ser usado variável no lugar do numero 2.
+   
+   document.write(mt);
+
+</script>
+
+<hr>
+
+<script>
+
+   // Math.sqrt -> Para calcular a raiz quadrada.
+
+   var valor=8;
+
+   var mt=Math.sqrt(valor); 
+   
+   document.write(mt);
+
+</script>
+
+<hr>
+
+<script>
+
+   // Math.random -> Retorna um valor aleatório entre 0 e o valor da variável.
+
+   var valor=8;
+
+   //var mt=Math.random()*valor; // sem arredondamento
+   var mt=Math.round(Math.random()*valor);  // Com arredondamento
+   
+   document.write(mt);
+
+</script>
+
+<hr>
+
+<script>
+
+   // Gerando 6 números de 0 a 60 para um sorteio.
+
+   var valor=60;
+   
+   for(var i=0;i<6;i++){
+      document.write(Math.round(Math.random()*valor)+"<br>");
+   }
+
+</script>
+   
+   <hr>
+
+<script>
+
+   // Métodos par seno e cosseno.
+
+   //Obs: Ele trabalho o angulo em radianos e retorna em graus, então é necessário transformar o valor retornado em radianos, para  isso é necessário chamar a constante PI e dividir por 180.
+
+   var angulo=45;
+
+   var c=Math.cos(angulo*Math.PI/180);
+   var s=Math.sin(angulo*Math.PI/180);
+
+      document.write("Angulo: "+ angulo+ "<br>" +"Cosseno:" + c + "<br>Seno:" + s);
+   
+
+</script>
+
+   <hr>
+
+<script>
+
+   // Math.max -> retorna o maior valor.
+   // Math.min -> retorna o menor valor.
+
+   
+
+   var valor=Math.max(1,2,3,4,5,6,7,8);
+
+   document.write(valor);
+
+</script>
+</head> 
+<body>
+
+ 
+
+
+</body>
+</html>

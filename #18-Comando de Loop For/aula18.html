@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Comando de Loop For</title>
+	<meta charset="utf-8">
+
+	 <script>
+  
+    var cont;
+
+   for(cont=0;cont<10;cont++){
+      document.write("CFB Cursos<br>");
+   }
+
+   //-----------------------------------------------------
+              document.write("<br>");
+   //---------- Usando for para impressão --------------
+
+   var num=[];
+
+   num.push(0);
+   num.push(1);
+   num.push(2);
+   num.push(3);
+   num.push(4);
+ 
+   for(cont=0;cont<5;cont++){
+      document.write(num[cont]+"<br>");
+   }
+
+   //-----------------------------------------------------
+              document.write("<br>");
+   //---------Usando for para inserir itens no array -----
+
+      var num=[];
+
+   for(cont=0;cont<5;cont++){
+      num.push(prompt("Digite um número",""));
+   }
+ 
+   for(cont=0;cont<5;cont++){
+      document.write(num[cont]+"<br>");
+   }
+   
+      //-----------------------------------------------------
+              document.write("<br>");
+     //------ Estrutura For para percorrer MATRIZES ---------
+
+
+    var mochila01=[["Corda",1],
+                  ["Cura",10],
+                  ["Lanterna",1],
+                  ["Pilhas",20]];
+
+    for(var lin=0;lin<4;lin++){
+       for(var col=0;col<2;col++){
+           document.write(mochila01[lin][col]+" ");
+       }
+       document.write("<br>");
+    }
+     
+
+
+
+
+   </script>       
+
+</head> 
+<body>
+
+
+</body>
+</html>

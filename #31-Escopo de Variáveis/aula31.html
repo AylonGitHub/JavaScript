@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Escopo de variáveis</title>
+	<meta charset="utf-8"/>
+
+  <script>
+    // O this pega a variavél da raiz.
+
+    var nomecor="Vermelho";
+    
+     function cor(){
+        var nomecor="Azul";
+        document.write(this.nomecor+"<br>");
+     }
+
+     cor();
+     document.write(nomecor);
+
+  </script>
+
+  <hr>
+
+    <script>
+    // 2 forma de declarar a variável.
+
+    //var i=0;  // aqui na raiz, e chama-la no dentro do for.
+
+    for(var i=0;i<10;i++); // ou aqui, declarando diretamente no for. Obs: Se declarar das duas formas a variavel será a mesma.
+
+    document.write(i+"<br>");
+
+  </script>
+
+
+
+
+
+ 	
+
+</head> 
+<body>
+
+    
+
+
+
+</body>
+</html>

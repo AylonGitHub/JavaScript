@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Manipulando Forms com Javascript </title>
+	<meta charset="utf-8"/>
+
+	<style>
+     label{
+        display: block;
+     }
+     input{
+        display: block;
+     }
+     input[type=submit],label{
+        margin-top: 10px;
+     }
+
+	</style>
+
+ 	  
+</head> 
+<body>
+
+  <form name="curso1" id="curso1" action="#" method="post">
+    <label>Nome</label>
+    <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+    <label>Senha</label>
+    <input type="password" name="fSenha" value="123">
+    <input type="submit" name="btEnviar" value="Enviar">
+    
+  </form>
+
+  <form name="curso2" id="curso2" action="#" method="post">
+    <label>Nome</label>
+    <input type="text" name="fNome" id="teste" value="Segundo - 2">
+    <label>Senha</label>
+    <input type="password" name="fSenha" value="123">
+    <input type="submit" name="btEnviar" value="Enviar">
+    
+  </form>
+
+
+
+  <hr>
+
+  <script>
+    
+    var fm=document.forms.length;  // Imprime o número de formúlários existentes na página.
+    document.write(fm);
+
+  </script>
+
+  <hr>
+
+  <script>
+    
+    var fm=document.forms[0].id; // imprime o id do formunlário de indice 0.
+    document.write(fm);
+
+  </script>
+
+
+  <hr>
+
+  <script>
+    // imprime o id do formunlário de indice 0.
+    var fm=document.forms[0].id; 
+    var fm=document.forms.item(0).id; //selecionando item.
+    var fm=document.forms.namedItem("curso1").id; // selecionado name.
+    document.write(fm); 
+
+  </script>
+
+    <hr>
+
+  <script>
+    // Retornando o formulário completo.
+    var fm=document.forms.namedItem("curso1").innerHTML; 
+    document.write(fm); 
+
+  </script>
+
+      <hr>
+
+  <script>
+    // Manipudando os elementos 
+    var fm=document.forms["curso1"].elements[0].value; // o label não entra na contagem do indice, somente o input. 
+    document.write(fm); 
+
+  </script>
+
+
+      <hr>
+
+  <script>
+    // Uma melhor maneira de trabalhar o código.
+    var fm=document.forms[0];
+    var el=fm.elements; 
+ 
+    el[0].style.backgroundColor="#ddd";
+    el[0].value="CFGCursos";
+
+    document.write(el); 
+
+  </script>
+
+
+  <hr>
+  <!-- ultimo formulário alterando todos os elementos -->
+ 
+   <form name="curso3" id="curso3" action="#" method="post">
+    <label>Nome</label>
+    <input type="text" name="fNome" id="teste" value="terceiro - 3">
+    <label>Senha</label>
+    <input type="password" name="fSenha" value="123">
+    <input type="submit" name="btEnviar" value="Enviar">
+    
+  </form>
+
+
+    <script>
+    // Alterando todos so elementos do formulário.
+    var fm=document.forms[2];
+    var el=fm.elements; 
+   
+     for(var i=0;i<el.length-1;i++){
+        el[i].style.backgroundColor="#ddd";
+        el[i].value="CFBCursos";
+        }
+
+
+  </script>
+
+    <hr>
+  <!-- Pegando elemento value atravéz do getElementById -->
+ 
+   <form name="curso4" id="curso4 action="#" method="post">
+    <label>Nome</label>
+    <input type="text" name="fNome" id="teste" value="Quarto - 4">
+    <label>Senha</label>
+    <input type="password" name="fSenha" value="123">
+    <input type="submit" name="btEnviar" value="Enviar">
+    
+  </form>
+
+
+    <script>
+    document.write(document.getElementById("curso3").elements[0].value)
+
+    var fm=document.forms[3];
+    var el=fm.elements; 
+   
+     // somente aqui ele faz as alterações.
+     for(var i=0;i<el.length-1;i++){
+        el[i].style.backgroundColor="red";
+        el[i].value="CFBCursos";
+        }
+
+
+  </script>
+
+</body>
+</html>

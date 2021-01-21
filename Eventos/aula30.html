@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>CFB Cursos - Javascript</title>
+	<meta charset="utf-8"/>
+	<script>
+
+/*//FUNÇÃO COM PASSAGEM DE PARÂMETROS POR ARRAY E RETORNO DE VALOR //*/
+
+        var numeros=new Array(10,2,5,30,25,19,20,50,80,120)
+        function media(nums){
+               var tam=nums.length;
+               var soma=0;
+               for(var i=0;i<tam;i++){
+               	soma+=nums[i];
+               }
+               return Math.round(soma/tam);
+        }
+        document.write(media(numeros)+"<br>");
+
+
+/*/////FUNÇÃO COM PASSAGEM DE PARÂMETROS E RETORNO DE VALOR //////*/      
+        function soma(n1,n2){
+        	return n1+n2;
+        }
+        var res=soma(3,7);
+        document.write(res+"<br>");
+       
+/*//////////// FUNÇÃO COM PARÂMETROS /////////////*/
+        
+        function soma(n1,n2){
+        	var res=n1+n2;
+        	document.write(res+"<br>");
+
+        }
+        soma(5,5);
+        soma(50,2);
+        soma(3,89);
+        
+/*//////////// FUNÇÃO SIMPLES SEM PARÂMETROS /////////////*/
+		
+		function escreve(){
+			document.write("Curso de Javascript - CFB Cursos");
+		}
+		escreve();
+		
+
+	</script>
+</head>
+<body>
+
+	<!--<h1><script> document.write(res);</script></h1>-->
+
+</body>
+</html>

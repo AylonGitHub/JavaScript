@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Objeto Location - P2</title>
+	<meta charset="utf-8"/>
+  <style>
+  </style>
+  <script>
+
+  	 //location.assign("p2.html"); // assign - redireciona para a url idicada.
+  	 //location.replace("p2.html"); // replace - redireciona para url e remove a url do histórico.
+  	 //location.reload("p2.html"); // reload - fica recarregando repetidamente!
+     
+     function p2(){
+     	location.assign("p2.html"); // Deixa habilitada a seta para retornar a ultima página visualizada no histórico.
+     	//location.replace("p2.html"); // Inativa a seta para retornar a ultima página.
+     }
+
+
+  	 function rec(){
+  	 	location.reload();
+  	 }
+  	
+  </script>
+</head>
+<body>
+
+    <h1>Objeto Location</h1>
+    <button id="btnP2" onclick="p2()">Página 2</button>
+    <button id="btnReload" onclick="rec()">Recarregar</button>
+
+   
+
+</body>
+</html>

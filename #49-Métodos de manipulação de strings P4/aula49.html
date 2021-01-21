@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>Métodos para manipulação de String P4</title>
+	<meta charset="utf-8"/>
+
+</head>
+
+<body>
+    <p>RESUMO : toString, trim e impressão de caracteres especiais.</p><br><hr><br>
+    
+
+    <script>
+
+      var num=15;
+
+      var res=num.toString();  // toString - para conversão de bases.
+      var bin=num.toString(2);
+      var oct=num.toString(8);
+      var hex=num.toString(16);
+
+      document.write(res +"<br>");
+      document.write(bin +"<br>");
+      document.write(oct +"<br>");
+      document.write(hex +"<br>");
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+      <script>
+    
+
+      var texto="     CFB Cursos - Curso de Javascript";
+
+      var res=texto.trim(); // trim - elimina espaços no início e no final.
+      alert(res); 
+
+      document.write(res);
+      
+
+    </script>
+
+    <br>
+    <hr>
+    <br>
+
+   <script>
+    
+
+      var texto="CFB Cursos - \"Curso\" de Javascript"; // Barras invertidas para impressão de caracteres especiais.
+
+      document.write(texto);
+      
+
+  </script>
+
+    <br>
+    <hr>
+    <br>
+
+   <script>
+    
+
+      var texto="CFB Cursos - \nCurso\n de Javascript"; // \n - para quebra de linhas em texto interno (não funciona no html).
+
+      alert(texto);
+      
+
+    </script>
+
+
+
+
+</body>
+</html>

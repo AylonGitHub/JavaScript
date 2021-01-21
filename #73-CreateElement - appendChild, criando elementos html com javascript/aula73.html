@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	
+	<title>CreateElement e appendChild</title>
+	<meta charset="utf-8"/>
+  <style>
+ 
+  </style>
+  <script>
+/*
+  // 1ª maneira de criar o texto.////////////////////////////////////
+     var p=document.createElement("p");
+     p.textContent="CFB Cursos";  
+     
+     function inicia(){
+      document.body.appendChild(p);
+     }
+
+     window.addEventListener("load",inicia);  
+
+*/
+
+
+/*
+  // 2ª maneira de criar o texto.///////////////////////////////////
+
+
+     var p=document.createElement("p");  // cria uma tag p na variável.
+     var t=document.createTextNode("Curso de Javascript - CFB Cursos"); // atraves de createTexNode um texto e deposita na variavel.
+
+
+     function inicia(){
+      p.appendChild(t); //abre um filho dentro de paragrafo com conteúdo da variavel relacionada.
+      document.body.appendChild(p); // inserir o paragrafo dentro de body.
+     }
+
+     window.addEventListener("load",inicia); 
+*/
+
+     // 3ª Forma - Adicionando elementos através do botão.////////////
+
+
+     function inicia(){
+         document.getElementById("btnAdd").addEventListener("click",function(){ // adicionando um escutador de evento click no botão que ativa a função anonima.
+           var lista=document.getElementById("listaElementos"); // atribui a variável conteúdo da ul.
+           var texto=document.getElementById("fnovo"); // atribui a variável o conteúdo do input.
+           var li=document.createElement("li"); // Cria um tag li e atribui a variável.
+           li.textContent=texto.value;  // atribui a variavel li um conteude de texto existente na variavél texto na propriedade value (valor digitado).
+           lista.appendChild(li); // Abre uma li como filho dentro da ul que está armazenada na varial lista.
+           texto.value="";  // na sequencia da rederização atribui a varivel texto um valor em branco, para limpar o campo input na tela.
+           texto.focus(); // adiciona ao input o cursos para digitação.
+         });
+
+      }
+
+     window.addEventListener("load",inicia); 
+
+    
+  </script>
+</head>
+<body>
+    <!-- //////ESTE FOUMULÁRIO PERTENCE A 3ª FORMA ///////////////-->
+
+    <input type="text" id="fnovo"><button id="btnAdd">Adicionar</button><br><br>
+
+    <ul id="listaElementos">
+      
+    </ul>
+
+
+    
+
+</body>
+</html>
